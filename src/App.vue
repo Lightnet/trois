@@ -6,16 +6,27 @@
       <Box :size="1" ref="box" :rotation="{ y: Math.PI / 4, z: Math.PI / 4 }">
         <LambertMaterial />
       </Box>
+      <Capsule>
+        <LambertMaterial />
+      </Capsule>
+
+      <CannonWorld :gravity="{ x: 0, y: -9.82, z: 0 }" @before-step="onBeforeStep">
+
+      </CannonWorld>
     </Scene>
   </Renderer>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { Box, Camera, LambertMaterial, MeshPublicInterface, PointLight, Renderer, RendererPublicInterface, Scene } from './export'
+import { Box, Camera, LambertMaterial, MeshPublicInterface, PointLight, Renderer, RendererPublicInterface, Scene, Capsule } from './export'
+import CannonWorld from "./components/physics/CannonWorld.js";
+
+
+//import { Box, Camera, LambertMaterial, MeshPublicInterface, PointLight, Renderer, RendererPublicInterface, Scene, Capsule } from '../build/trois.module'
 
 export default defineComponent({
-  components: { Box, Camera, LambertMaterial, PointLight, Renderer, Scene },
+  components: { Box, Camera, LambertMaterial, PointLight, Renderer, Scene, Capsule, CannonWorld },
   mounted() {
     const renderer = this.$refs.renderer as RendererPublicInterface
     const mesh = (this.$refs.box as MeshPublicInterface).mesh
@@ -25,6 +36,10 @@ export default defineComponent({
       })
     }
   },
+  methods:{
+    onBeforeStep() {
+    }
+  }
 })
 </script>
 

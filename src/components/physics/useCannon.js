@@ -3,7 +3,7 @@ import {
   Body, World,
   SAPBroadphase,
   Quaternion, Vec3,
-} from 'cannon'
+} from 'cannon-es'
 
 export default function useCannon(options) {
   const {

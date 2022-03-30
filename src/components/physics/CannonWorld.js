@@ -1,11 +1,13 @@
 import { defineComponent } from 'vue'
 import useCannon from './useCannon.js'
-import { RendererInjectionKey, SceneInjectionKey } from '../../../build/trois.module.js'
+//import { RendererInjectionKey, SceneInjectionKey } from '../../../build/trois.module.js'
+import { RendererInjectionKey } from '../../core/Renderer'
+import { SceneInjectionKey } from '../../core/Scene'
 
 export default defineComponent({
   inject: {
-    renderer: RendererInjectionKey,
-    scene: SceneInjectionKey,
+    renderer: {from:RendererInjectionKey},
+    scene: {from:SceneInjectionKey},
   },
   props: {
     gravity: { type: Object, default: () => ({ x: 0, y: 0, z: -9.82 }) },

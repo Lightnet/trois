@@ -32,9 +32,9 @@ const external = [
 ]
 
 const cdnReplaces = {
-  'from \'vue\'': 'from \'https://unpkg.com/vue@3.2.20/dist/vue.esm-browser.prod.js\'',
-  'from \'three\'': 'from \'https://cdn.skypack.dev/three@0.136.0/build/three.module.js\'',
-  'from \'three/examples': 'from \'https://cdn.skypack.dev/three@0.136.0/examples',
+  'from \'vue\'': 'from \'https://unpkg.com/vue@3.2.31/dist/vue.esm-browser.prod.js\'',
+  'from \'three\'': 'from \'https://cdn.skypack.dev/three@0.139.0/build/three.module.js\'',
+  'from \'three/examples': 'from \'https://cdn.skypack.dev/three@0.139.0/examples',
   delimiters: ['', ''],
 }
 

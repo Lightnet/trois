@@ -12,7 +12,7 @@ export default defineComponent({
   setup(props) {
     const renderer = inject(RendererInjectionKey)
     const scene = new Scene()
-
+    console.log("renderer",renderer)
     if (!renderer) {
       console.error('Renderer not found')
       return
@@ -38,6 +38,9 @@ export default defineComponent({
     const remove = (o: Object3D): void => { scene.remove(o) }
 
     return { scene, add, remove }
+  },
+  mounted() {
+    
   },
   render() {
     return this.$slots.default ? this.$slots.default() : []

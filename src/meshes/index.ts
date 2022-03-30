@@ -1,6 +1,7 @@
 export { default as Mesh, MeshInjectionKey } from './Mesh'
 
 export { default as Box } from './Box'
+export { default as Capsule } from './Capsule'
 export { default as Circle } from './Circle'
 export { default as Cone } from './Cone'
 export { default as Cylinder } from './Cylinder'

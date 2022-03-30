@@ -1,6 +1,7 @@
 export { default as BufferGeometry } from './Geometry'
 
 export { default as BoxGeometry } from './BoxGeometry'
+export { default as CapsuleGeometry } from './CapsuleGeometry'
 export { default as CircleGeometry } from './CircleGeometry'
 export { default as ConeGeometry } from './ConeGeometry'
 export { default as CylinderGeometry } from './CylinderGeometry'
